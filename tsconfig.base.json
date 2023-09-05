@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "modules/auth": ["modules/auth/src/index.ts"],
+      "modules/shared/ui": ["modules/shared/ui/src/index.ts"],
       "modules/template": ["modules/template/src/index.ts"]
     }
   },
