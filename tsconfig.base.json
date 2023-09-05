@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "modules/auth": ["modules/auth/src/index.ts"]
+      "modules/auth": ["modules/auth/src/index.ts"],
+      "modules/template": ["modules/template/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
