@@ -16,6 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "modules/auth": ["modules/auth/src/index.ts"],
+      "modules/main-content": ["modules/main-content/src/index.ts"],
+      "modules/player": ["modules/player/src/index.ts"],
+      "modules/playlist": ["modules/playlist/src/index.ts"],
+      "modules/search": ["modules/search/src/index.ts"],
       "modules/shared/ui": ["modules/shared/ui/src/index.ts"],
       "modules/template": ["modules/template/src/index.ts"]
     }
