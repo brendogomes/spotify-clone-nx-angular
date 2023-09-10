@@ -6,6 +6,6 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('../../modules/template/src/lib/template.module').then(
         (m) => m.TemplateModule
-      ), 
+      ),  
   },
 ];
