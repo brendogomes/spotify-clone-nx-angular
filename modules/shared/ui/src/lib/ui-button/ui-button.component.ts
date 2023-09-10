@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-ui',
+  selector: 'lib-ui-button',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './ui.component.html',
-  styleUrls: ['./ui.component.scss'],
+  templateUrl: './ui-button.component.html',
+  styleUrls: ['./ui-button.component.scss'],
 })
-export class UiComponent {}
+export class UiButtonComponent {}
