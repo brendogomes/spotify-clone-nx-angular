@@ -15,6 +15,27 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "scope:auth",
+                "onlyDependOnLibsWithTags": ["scope:auth"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:ui"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui"]
+              },
+              {
+                "sourceTag": "scope:template",
+                "onlyDependOnLibsWithTags": [
+                  "scope:main-content",
+                  "scope:player",
+                  "scope:playlist",
+                  "scope:search"
+                ]
               }
             ]
           }
