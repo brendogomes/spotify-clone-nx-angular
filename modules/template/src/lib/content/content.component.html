@@ -1,18 +1,22 @@
 <div class="h-screen flex flex-col bg-black">
     <div class="flex flex-1">
-        <aside class="w-64">
-            <nav>
+        <aside class="w-80">
+            <lib-ui-card>
                 <lib-search></lib-search>
-            </nav>
-            <section>
+            </lib-ui-card>
+            <lib-ui-card class="h-100">
                 <lib-playlist></lib-playlist>
-            </section>
+            </lib-ui-card>
         </aside>
         <main class="flex-1">
-            <lib-main-content></lib-main-content>
+            <lib-ui-card>
+                <lib-main-content></lib-main-content>
+            </lib-ui-card>
         </main>
     </div>
     <footer>
-        <lib-player></lib-player>
+        <lib-ui-card>
+            <lib-player></lib-player>
+        </lib-ui-card>
     </footer>
 </div>

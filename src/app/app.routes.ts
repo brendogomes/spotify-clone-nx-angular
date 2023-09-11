@@ -10,7 +10,7 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: '',
+    path: 'web-player',
     loadChildren: () =>
       import('../../modules/template/src/lib/template.module').then(
         (m) => m.TemplateModule

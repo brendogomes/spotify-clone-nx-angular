@@ -7,6 +7,7 @@ import { PlayerComponent } from 'modules/player';
 import { MainContentComponent } from 'modules/main-content';
 import { PlaylistComponent } from 'modules/playlist';
 import { SearchComponent } from 'modules/search';
+import { UiCardComponent } from 'modules/shared/ui';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { SearchComponent } from 'modules/search';
     PlaylistComponent,
     MainContentComponent,
     PlayerComponent,
+    UiCardComponent,
     RouterModule.forChild(templateRoutes),
   ],
   declarations: [ContentComponent],
