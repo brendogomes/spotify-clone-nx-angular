@@ -1,4 +1,5 @@
 <button
-    [ngClass]="buttonColorClass + ' flex items-center justify-center px-5 py-3 rounded-full hover:bg-green-600 ' + textColorClass + ' font-semibold shadow-md'">
+    [ngClass]="buttonColorClass + ' flex items-center justify-center px-5 py-3 rounded-full hover:bg-green-600 ' + textColorClass + ' font-semibold shadow-md'"
+    [disabled]="isDisabled">
     <ng-content></ng-content>
 </button>

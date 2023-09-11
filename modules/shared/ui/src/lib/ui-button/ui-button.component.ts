@@ -11,4 +11,5 @@ import { CommonModule } from '@angular/common';
 export class UiButtonComponent {
   @Input() buttonColorClass: string = 'bg-primary';
   @Input() textColorClass: string = 'text-dark';
+  @Input() isDisabled: boolean = false;
 }
