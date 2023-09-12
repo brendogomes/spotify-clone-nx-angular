@@ -27,7 +27,17 @@ describe('UiButtonComponent', () => {
   it('should be disabled when isDisabled is true', () => {
     component.isDisabled = true; 
     fixture.detectChanges();
+    
     const libButtonElement: HTMLButtonElement = fixture.nativeElement.querySelector('button');
     expect(libButtonElement.disabled).toBe(true);
   });
+
+  it('should render the content inside ng-content', () => {
+    const testContent = '';
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    const libButtonElement: HTMLButtonElement = fixture.nativeElement.querySelector('button');
+    expect(libButtonElement.textContent).toContain(testContent);
+  })
 });
