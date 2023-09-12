@@ -1,6 +1,7 @@
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { SpotifyAuthServiceService } from 'modules/auth/src/lib/service/spotify-auth.service.service';
+import { SpotifyAuthServiceService } from 'modules/auth/src/lib/core/service/spotify-auth.service.service';
+
 
 export const userIsAuthenticatedResolver = () =>
   new Promise(async (resolve, reject) => {

@@ -1,4 +1,4 @@
-import { SpotifyConfiguration } from './../../../../../src/environments/environment';
+import { SpotifyConfiguration } from './../../../../../../src/environments/environment';
 import { Injectable } from '@angular/core';
 import Spotify from 'spotify-web-api-js';
 import { User } from '../model/user.model';

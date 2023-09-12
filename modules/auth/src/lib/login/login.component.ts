@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SpotifyAuthServiceService } from '../service/spotify-auth.service.service';
+import { SpotifyAuthServiceService } from '../core/service/spotify-auth.service.service';
 
 @Component({
   selector: 'lib-login',

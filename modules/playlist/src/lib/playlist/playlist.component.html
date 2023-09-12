@@ -1,1 +1,9 @@
-<p>playlist works!</p>
+<section>
+    <h3 class="font-semibold text-white mb-3">Playlists</h3>
+    <div id="playlist-container">
+        <div *ngFor="let playlist of playlists" class="mb-4 flex items-center mr-2 cursor-pointer text-white hover:text-primary">
+            <lib-ui-photo [imageUrl]="playlist.imageUrl"></lib-ui-photo>
+            <p class="ml-2 truncate font-semibold mr-2">{{ playlist.name }}</p>
+        </div>
+    </div>
+</section>

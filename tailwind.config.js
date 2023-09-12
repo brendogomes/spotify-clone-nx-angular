@@ -15,9 +15,8 @@ module.exports = {
           DEFAULT: '#1FDF64',
         },
         white: '#ffffff',
-        black: '#000000',
-        gray900: '#101010',
-        gray800: '#242424',
+        black: '#121212',
+        gray900: '#1C1C1C',
       },
       spacing: {
         sm: '0.5rem',
