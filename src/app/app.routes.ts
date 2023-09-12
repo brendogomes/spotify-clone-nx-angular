@@ -1,7 +1,8 @@
 import { Route } from '@angular/router';
+import { userIsAuthenticatedResolver } from './resolvers/user-authentication-resolver';
 
 export const appRoutes: Route[] = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'web-player', pathMatch: 'full' },
   {
     path: 'login',
     loadChildren: () =>
@@ -15,5 +16,8 @@ export const appRoutes: Route[] = [
       import('../../modules/template/src/lib/template.module').then(
         (m) => m.TemplateModule
       ),
+    resolve: {
+      isAuthenticated: userIsAuthenticatedResolver,
+    },
   },
 ];
