@@ -24,7 +24,6 @@ export class PlaylistComponent implements OnInit {
     const response = this.playlistService.getUserPlaylists();
     response.then((responseData) => {
         this.playlists = responseData;
-        console.log(this.playlists)
       })
       .catch((responseError) => {});
   }
