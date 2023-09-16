@@ -1,7 +1,7 @@
+import { Music } from './../../../../../src/app/core/class/music.class';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainContentService } from '../../core/service/main-content.service';
-import { Music } from '../../core/class/music.class';
 
 @Component({
   selector: 'lib-music-dashboard',

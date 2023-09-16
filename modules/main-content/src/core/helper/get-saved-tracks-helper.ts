@@ -1,4 +1,4 @@
-import { Music } from '../class/music.class';
+import { Music } from 'src/app/core/class/music.class';
 import { newMusic } from '../factories/new-music-factorie';
 import { addMilliseconds, format } from 'date-fns';
 

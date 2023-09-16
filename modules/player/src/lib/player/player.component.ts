@@ -1,9 +1,10 @@
+import { IMusic } from 'src/app/core/interface/music.interface';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { newMusic } from '../../core/factories/new-music-factorie';
-import { IMusic } from '../../core/interface/music.interface';
 import { Subscription } from 'rxjs';
 import { PlayerService } from '../../core/services/player.service';
+import { Music } from 'src/app/core/class/music.class';
 
 @Component({
   selector: 'lib-player',
@@ -13,7 +14,7 @@ import { PlayerService } from '../../core/services/player.service';
   styleUrls: ['./player.component.scss'],
 })
 export class PlayerComponent implements OnInit, OnDestroy {
-  music: IMusic = newMusic();
+  music: Music = newMusic();
   subscriptionPlayer: Subscription[] = [];
   isPlaying: boolean = false;
 

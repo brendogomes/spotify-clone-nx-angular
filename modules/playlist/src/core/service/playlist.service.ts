@@ -1,6 +1,6 @@
+import { Playlist } from './../../../../../src/app/core/class/playlist.model';
 import Spotify from 'spotify-web-api-js';
 import { Injectable } from '@angular/core';
-import { Playlist } from '../class/playlist.model';
 
 @Injectable({
   providedIn: 'root',

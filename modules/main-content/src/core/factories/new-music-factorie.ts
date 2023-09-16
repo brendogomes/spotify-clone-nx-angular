@@ -1,6 +1,6 @@
-import { Album } from '../class/album.class';
-import { Artist } from '../class/artist.class';
-import { Music } from '../class/music.class';
+import { Artist } from 'src/app/core/class/artist.class';
+import { Album } from 'src/app/core/class/album.class';
+import { Music } from 'src/app/core/class/music.class';
 
 export function newMusic(): Music {
   const album: Album = {

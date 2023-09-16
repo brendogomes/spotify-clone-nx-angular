@@ -1,7 +1,7 @@
+import { Music } from 'src/app/core/class/music.class';
+import { Artist } from 'src/app/core/class/artist.class';
 import Spotify from 'spotify-web-api-js';
 import { Injectable } from '@angular/core';
-import { Artist } from '../class/artist.class';
-import { Music } from '../class/music.class';
 import { SpotifyTrackToMusicHelper } from '../helper/get-saved-tracks-helper';
 
 @Injectable({

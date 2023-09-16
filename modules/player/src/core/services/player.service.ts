@@ -1,8 +1,8 @@
+import { IMusic } from 'src/app/core/interface/music.interface';
 import Spotify from 'spotify-web-api-js';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { newMusic } from '../factories/new-music-factorie';
-import { IMusic } from '../interface/music.interface';
 import { SpotifyTrackToMusicHelper } from 'modules/main-content/src/core/helper/get-saved-tracks-helper';
 
 @Injectable({

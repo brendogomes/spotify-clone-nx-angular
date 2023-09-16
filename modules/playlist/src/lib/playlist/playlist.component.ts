@@ -1,7 +1,7 @@
+import { Playlist } from 'src/app/core/class/playlist.model';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlaylistService } from '../../core/service/playlist.service';
-import { Playlist } from '../../core/class/playlist.model';
 import { UiCardComponent, UiPhotoComponent, UiPlayerComponent } from 'modules/shared/ui';
 
 @Component({
