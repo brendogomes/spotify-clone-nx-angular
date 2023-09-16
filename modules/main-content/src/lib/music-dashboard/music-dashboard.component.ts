@@ -1,7 +1,10 @@
-import { Music } from './../../../../../src/app/core/class/music.class';
+import { Subscription } from 'rxjs';
+import { IMusic } from 'src/app/core/interface/music.interface';
+import { Music } from 'src/app/core/class/music.class';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainContentService } from '../../core/service/main-content.service';
+import { PlayerService } from 'modules/player/src/core/services/player.service';
 
 @Component({
   selector: 'lib-music-dashboard',
@@ -11,25 +14,36 @@ import { MainContentService } from '../../core/service/main-content.service';
   styleUrls: ['./music-dashboard.component.scss'],
 })
 export class MusicDashboardComponent implements OnInit {
-  musics: Music[] = []
-  showButton: { [key: string]: boolean } = {};
+  musics: Music[] = [];
+  subscriptionPlayer: Subscription[] = [];
+  selectedMusic?: Music;
 
-
-  constructor(private mainContentService: MainContentService) {}
+  constructor(
+    private mainContentService: MainContentService,
+    private playerService: PlayerService
+  ) {}
 
   ngOnInit(): void {
     this.fetchSavedTracks();
+    this.getPlayingMusic();
   }
 
-  fetchSavedTracks(): void {
-    const response = this.mainContentService.getSavedTracks();
-    response
-      .then((responseData) => {
-        this.musics = responseData;
-        console.log(responseData);
-      })
-      .catch((responseError) => {
-        console.log(responseError);
-      });
+  async fetchSavedTracks(): Promise<void> {
+    this.musics = await this.mainContentService.getSavedTracks();
+  }
+
+  async playMusic(music: IMusic): Promise<void> {
+    this.selectedMusic = music;
+    await this.playerService.playMusic(music.id);
+    this.playerService.setCurrentMusic(music);
+  }
+
+  getPlayingMusic(): void {
+    const subscription = this.playerService.currentMusic.subscribe((music) => {
+      if (this.selectedMusic?.id !== music.id) {
+        this.selectedMusic = music;
+      }
+    });
+    this.subscriptionPlayer.push(subscription);
   }
 }

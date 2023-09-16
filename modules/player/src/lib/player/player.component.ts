@@ -17,6 +17,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
   music: Music = newMusic();
   subscriptionPlayer: Subscription[] = [];
   isPlaying: boolean = false;
+  selectedMusic?: Music;
 
   constructor(private playerService: PlayerService) {}
 
@@ -30,7 +31,11 @@ export class PlayerComponent implements OnInit, OnDestroy {
 
   getPlayingMusic(): void {
     const subscription = this.playerService.currentMusic.subscribe((music) => {
-      this.music = music;
+      if (this.selectedMusic?.id !== music.id) {
+        this.isPlaying = true;
+        this.music = music;
+        this.selectedMusic = music;
+      }
     });
     this.subscriptionPlayer.push(subscription);
   }
@@ -38,6 +43,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
   async playMusic(music: IMusic): Promise<void> {
     await this.playerService.playMusic(music.id);
     this.playerService.setCurrentMusic(music);
+    this.selectedMusic = music;
     this.isPlaying = true;
   }
 
